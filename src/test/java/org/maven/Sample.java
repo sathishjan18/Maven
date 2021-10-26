@@ -3,6 +3,7 @@ package org.maven;
 import java.io.IOException;
 
 import org.baseclass.BaseClass;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,8 +13,9 @@ import org.pojo.FbLoginPojo;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Sample extends BaseClass {
+	@Test
 
-	public static void main(String[] args) throws IOException {
+public void tc6(){
 
 		
 		launchBrowser();

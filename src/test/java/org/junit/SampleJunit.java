@@ -46,6 +46,7 @@ public class SampleJunit extends BaseClass{
 		 
 		 
 	}
+	 @Ignore
 	 @Test
 	 public void tc2() {
 		 System.out.println("Test Case 2");
@@ -71,6 +72,7 @@ public class SampleJunit extends BaseClass{
 			getAttributeValue(f.getPassWord());
 
 	}
+	 @Ignore
 	 @Test
 	 public void tc4() {
 		 
