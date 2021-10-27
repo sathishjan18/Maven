@@ -240,5 +240,28 @@ public class BaseClass {
 		System.out.println("writed...");
 
 	}
+	public static void updateToParticularCell(String existValue,String newValue, String sheetName , int rowNum, String folderName, int cellNum) throws IOException {
+		
+		File f = new File("C:\\Users\\91770\\eclipse-workspace\\Day1\\Excel"+folderName +".xlsx");
+		
+		FileInputStream fis = new FileInputStream(f);
+		Workbook w= new XSSFWorkbook(fis);
+		
+		Sheet sheet = w.getSheet(sheetName);
+		
+		Row row = sheet.getRow(rowNum);
+
+		Cell cell = row.getCell(cellNum);
+
+		String scv = cell.getStringCellValue();
+		
+		if (scv.equals(existValue)) {
+			
+			cell.setCellValue(newValue);
+		}
+		
+		FileOutputStream fos = new FileOutputStream(f);
+		w.write(fos);
+	}
 
 }
